@@ -13,6 +13,7 @@ class TodoListScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.brown,
         title: Text('Todo List'),
       ),
       body: BlocProvider(
@@ -72,7 +73,7 @@ class TodoList extends StatelessWidget {
                             height: 50,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(15.0),
-                              color: Colors.blue,
+                              color: Colors.brown,
                               boxShadow: [
                                 BoxShadow(
                                   color: Colors.grey.shade400,
@@ -123,6 +124,7 @@ class TodoList extends StatelessWidget {
                                 title: Text(todo.title),
                                 leading: Checkbox(
                                   value: todo.isCompleted == 0 ? false : true,
+                                  activeColor: Colors.brown,
                                   onChanged: (val) {
                                     var todos = Todo(
                                         id: todo.id,
